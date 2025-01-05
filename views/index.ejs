@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Basics</title>
+</head>
+<body>
+  <% if(locals.currentUser){ %>
+    <h1>Welcome, <%= locals.currentUser.username %></h1>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <h1>Auth Basics</h1>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  <% } %>
+</body>
+</html>
